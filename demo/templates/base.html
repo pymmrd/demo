@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wb="http://open.weibo.com/wb"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+    <link href="{{ STATIC_URL }}/css/reset.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="{{ STATIC_URL }}/css/style_all.css" rel="stylesheet" type="text/css" media="screen">
+<style type="text/css">
+#header_taller{padding-top: 15px;height: 140px;}
+#fnavi_taller{margin-bottom: 10px;}
+#fntext1_taller{padding-top: 10px;}
+.cus_in3,.cus_in2{font-size: 14px;}
+.cus_in2{margin-left: 8px;}
+</style>
+    
+<link href="{{ STATIC_URL }}/css/tags_new.css" rel="stylesheet" type="text/css" media="screen">
+<style>
+ .photo_container {
+    width: 100px;
+    height: 80px;
+    margin: 0;
+    padding: 0;
+    float:left;
+  }
+
+  .remove_photo {
+    position: relative;
+    width: 21px;
+    height: 19px;
+    background: #ffffff;
+    top: -68px;
+    left: 66px;
+    z-index: 200;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    display: none;
+  }
+
+  .plupload {
+    display:block;
+    position: absolute;
+    width: 67px;
+    height: 28px;
+    top: 1px;
+    left: 1px;
+  }
+ .mainbelowright_title_to{
+    border-bottom: 1px dashed #E2E2E2;
+    padding-bottom: 10px;
+}
+.n_info_ui{
+    font-size: 12px;
+    position: relative;
+    top: 10px;
+}
+.check_title_top{font-size:15px;}
+.topside_details_to p,.textarea_tags_ui{font-size:12px;}
+</style>
+
+
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" href="/static/css/ie.css" media="screen" />
+    <![endif]-->        
+         
+    <!-- This is a stub for ie6/7/8, should be remove as soon as possible -->
+
+  <!-- page specific javascript -->
+  <!-- templates -->
+  
+  </head>
+
+  <body>
+<noscript><iframe><src="1*.htm"></iframe></noscript>
+{% block header %}
+	{% include "tags/header.html" %}
+{% endblock %}
+<div id="main_all">
+{% block content %}
+
+{% endblock %}
+</div>
+  <div id="footer">
+    <dl>
+        <dt>关于</dt>
+        <dd><a href="/chain/">友情链接</a></dd>
+        <dd><a href="/contact/">联系我们</a></dd>
+    </dl>
+  </div>
+
+</body>

@@ -18,7 +18,12 @@ urlpatterns = patterns('',
     # url(r'^admin/', include(admin.site.urls)),
 	(r'^$', direct_to_template, {'template': 'shipin1.html'}, 'home'),
 	(r'^shipin/$', direct_to_template, {'template': 'shipin1.html'}, 'shipin'),
+	(r'^pibao/$', direct_to_template, {'template': 'content.html'}, 'pibao'),
+	(r'^shenghuo/$', direct_to_template, {'template': 'content.html'}, 'shenghuo'),
+	(r'^diy/$', direct_to_template, {'template': 'content.html'}, 'diy'),
+	(r'^yishu/$', direct_to_template, {'template': 'content.html'}, 'yishu'),
 	(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
+	(r'^', include('cans.urls')),
 
 )
 if settings.DEBUG:

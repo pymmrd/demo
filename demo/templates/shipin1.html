@@ -1,125 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wb="http://open.weibo.com/wb"><head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
-    <link href="{{ STATIC_URL }}/css/reset.css" rel="stylesheet" type="text/css" media="screen">
-    <link href="{{ STATIC_URL }}/css/style_all.css" rel="stylesheet" type="text/css" media="screen">
-<style type="text/css">
-#header_taller{padding-top: 15px;height: 140px;}
-#fnavi_taller{margin-bottom: 10px;}
-#fntext1_taller{padding-top: 10px;}
-.cus_in3,.cus_in2{font-size: 14px;}
-.cus_in2{margin-left: 8px;}
-</style>
-    
-<link href="{{ STATIC_URL }}/css/tags_new.css" rel="stylesheet" type="text/css" media="screen">
-<style>
- .photo_container {
-    width: 100px;
-    height: 80px;
-    margin: 0;
-    padding: 0;
-    float:left;
-  }
+{% extends "base.html" %}
 
-  .remove_photo {
-    position: relative;
-    width: 21px;
-    height: 19px;
-    background: #ffffff;
-    top: -68px;
-    left: 66px;
-    z-index: 200;
-    margin: 0;
-    padding: 0;
-    cursor: pointer;
-    border: none;
-    display: none;
-  }
-
-  .plupload {
-    display:block;
-    position: absolute;
-    width: 67px;
-    height: 28px;
-    top: 1px;
-    left: 1px;
-  }
- .mainbelowright_title_to{
-    border-bottom: 1px dashed #E2E2E2;
-    padding-bottom: 10px;
-}
-.n_info_ui{
-    font-size: 12px;
-    position: relative;
-    top: 10px;
-}
-.check_title_top{font-size:15px;}
-.topside_details_to p,.textarea_tags_ui{font-size:12px;}
-</style>
-
-
-    <!--[if lt IE 9]>
-    <link rel="stylesheet" type="text/css" href="/static/css/ie.css" media="screen" />
-    <![endif]-->        
-         
-    <!-- This is a stub for ie6/7/8, should be remove as soon as possible -->
-
-  <!-- page specific javascript -->
-  <!-- templates -->
-  
-  </head>
-
-  <body>
-<noscript><iframe><src="1*.htm"></iframe></noscript>
-  
-<script type="text/javascript"> 
-   var ins = ins || {};
-   ins.o = new Object(); 
-   function T(_h,_w){
-        var _mt; 
-        _h = _h-180;
-	_w = _w-200;
-        _mt = -(_h / 2);
-	_ml = -(_w / 2);
-        return [_h, _mt, _ml];
-    }
-    function autoSize(img){
-        var image = new Image(); 
-		image.onload=image.onreadystatechange=image.onerror=function(){
-                var _w = this.width, _h = this.height, re;
-                re = T(_h,_w); 
-				if(_h > 180 && _w > 200){
-                    $(img).css({"margin-top":re[1],"margin-left":re[2]}); 
-				}
-				afterRender(".topside_img");	
-        };
-        image.src = img.src;
-    }  
-	function afterRender(id){ 
-        var counter = 0;
-        $(id+" .tag_photo").each(function(i, item){
-            setTimeout(function(){
-                $(item).css({visibility:"visible"}).animate({opacity:1}, 500);}, counter * 200);
-			counter++;
-		});
-	}
-</script>
-<div id="header_taller">
-	   <a class="logo" href="/"></a>
-       <div id="menu">
-                <div class="oe_wrapper">
-                    <ul class="oe_menu" id="oe_menu">
-                        <li class="menu_li">
-                            <a class="link" href="/">饰品</a>
-                        </li><!--menu_li--> 
-                        <li class="menu_li">
-                            <a class="link" href="/pibao/">皮包</a>
-                        </li><!--menu_li--> 
-                	</ul><!--navi_menu_ul-->
-        		</div><!--oe_wrapper-->
-        </div><!--menu-->
-</div>
+{% block content %}
 <div id="main_all">
 	<div id="main_below_h">
 		<div class="tagged_about_left">
@@ -168,11 +49,11 @@
 <li>
 		<div class="my_blog_picall">
 			<div class="my_blog_pic">
-			<a href="/creation/6032/" target="_blank">
+			<a href="/creation/1/" target="_blank">
 			<img src="{{ STATIC_URL }}/cjX4y9NYhS9zg6Py7Rq94bsecondary.jpeg" alt="blog_pic" width="220"></a>
 			</div>
 		</div>
-    	<a target="_blank" class="res_img" href="/creation/6032/">
+    	<a target="_blank" class="res_img" href="/creation/1/">
 		<h4 class="PL_one">贝壳，松果，碎片</h4>
 	</a>
 	<p class="tag_content_p">
@@ -182,15 +63,15 @@
 <li>
 		<div class="my_blog_picall">
 			<div class="my_blog_pic">
-			<a href="/creation/6027/" target="_blank">
+			<a href="/creation/2/" target="_blank">
 			<img src="{{ STATIC_URL }}/gnwE8jhgC2TyDzgwwJ3JfCsecondary.jpeg" alt="blog_pic" width="220"></a>
 			</div>
 		</div>
-    	<a target="_blank" class="res_img" href="/creation/6027/">
+    	<a target="_blank" class="res_img" href="/creation/2/">
 		<h4 class="PL_one">陶瓷珠子纯手工编织手链</h4>
 	</a>
 	<p class="tag_content_p"></p>
-	<a style="display: none;" class="my_blog_more" target="_blank" href="/creation/6027/">查看作品</a>
+	<a style="display: none;" class="my_blog_more" target="_blank" href="/creation/2/">查看作品</a>
 <div class="tags_blog_border_f_ui"></div>
 </li>
 <li>
@@ -198,13 +79,13 @@
 		
 			<div class="my_blog_pic">
          
-			<a href="/creation/6017/" target="_blank">
+			<a href="/creation/3/" target="_blank">
 		
 			<img src="{{ STATIC_URL }}/C9Zs6tVhLFuTnGTbKPP6Vksecondary.jpeg" alt="blog_pic" width="220"></a>
 		
 			</div>
 		</div>
-    	<a target="_blank" class="res_img" href="/creation/6017/">
+    	<a target="_blank" class="res_img" href="/creation/3/">
 		<h4 class="PL_one">天然原石水晶花项链</h4>
 	</a>
 	<p class="tag_content_p">
@@ -215,16 +96,31 @@
 <li>
 		<div class="my_blog_picall">
 			<div class="my_blog_pic">
-			<a href="/blog/1820/" target="_blank">
+			<a href="/creation/4/" target="_blank">
 			<img src="{{ STATIC_URL }}/pLt2ofptAw5MzRCbnxs7s6secondary.jpeg" alt="blog_pic" width="220"></a>
 			</div>
 		</div>
-    	<a target="_blank" class="res_img" href="/blog/1820/">
-		<h4 class="PL_one">原创嵌花树脂教程（by @mochizukikaoru ）</h4>
+		<h4 class="PL_one">原创嵌花树脂教程</h4>
 	</a>
 	<p class="tag_content_p">
 		这个坑真的属于不小心掉进来的。 <br>原本只是想给热缩涂层保护膜，手边刚好有模子就想着是否能尝试一下做成立体的东西，结果意外一次就顺利成功，从此就打开了新世界的 <br>大门=L=。 <br>【需要的材料】 <br>①树脂（和硬化液的比率是2:1） <br>②硬化液 <br>③量杯 <br>④搅拌棍 <br>（金属塑料皆可，最好是准备一根细长的搅拌，一个扁平的挂量杯剩余的树脂） <br>⑤模子 <br>（有专用的模子例如： http://item.rakuten.co.jp/grass-road/589202/#589202 ） <br>相信也有不少同好知道现在各种形状
 	</p>
+<div class="tags_blog_border_f_ui"></div>
+</li>
+<li>
+		<div class="my_blog_picall">
+			<div class="my_blog_pic">
+			<a target="_blank" href="/creation/5/">
+			<img width="220" alt="blog_pic" src="{{ STATIC_URL }}ixXvY4eYDJg9RgjYNdzvsV!secondary.jpeg"></a>
+			</div>
+		</div>
+    	<a href="/creation/5/" class="res_img" target="_blank">
+		<h4 class="PL_one">牛皮耳机防尘塞-八哥犬 情侣礼物 小清新 鹿宝工坊原创设计</h4>
+	</a>
+	<p class="tag_content_p">
+	</p>
+	<a href="/creation/5/" target="_blank" class="my_blog_more" style="display: none;">查看作品</a>
+	</div>
 <div class="tags_blog_border_f_ui"></div>
 </li>
           </ul>
@@ -232,4 +128,5 @@
                 </div><!--tabs-->
               </div><!--list_display-->
             </div><!--mainbelowleft-->
-</div></body></html>
+</div>
+{% endblock %}
